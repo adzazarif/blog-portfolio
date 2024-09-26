@@ -22,3 +22,7 @@ route::prefix('admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::resource('project',ProjectController::class);
 });
+
+Route::get('/home', function () {
+    return view('home');
+});
