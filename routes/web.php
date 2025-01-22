@@ -26,3 +26,16 @@ route::prefix('admin')->group(function () {
 Route::get('/home', function () {
     return view('home');
 });
+
+Route::get('/donasi', function () {
+    return view('donasi');
+});
+Route::get('/detail-donasi', function () {
+    return view('detail-donasi');
+});
+Route::get('/form-donasi', function () {
+    return view('form-donasi');
+});
+Route::get('/form-laporan', function () {
+    return view('form-laporan');
+});
