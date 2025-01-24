@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta title="Portfolio Adza Zarif">
+    <title>Adza Zarif</title>
     @vite('resources/css/app.css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -11,17 +13,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.0.0/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
-<body>
+<body class="overflow-x-hidden">
 
-    <nav class="bg-dark dark:bg-dark fixed w-full z-20 top-0 start-0 dark:border-gray-600">
+    <nav class=" backdrop-blur-md dark:bg-dark fixed w-full z-50 top-0 start-0 dark:border-gray-600">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <p class="text text-white">Adza Zarif</p>
             <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                 <button type="button"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get
-                    started</button>
+                    class="text-white bg-dark hover:bg-yellow duration-100 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Resume</button>
                 <button data-collapse-toggle="navbar-sticky" type="button"
                     class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     aria-controls="navbar-sticky" aria-expanded="false">
@@ -35,7 +39,7 @@
             </div>
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                 <ul
-                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-dark dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
                     <li>
                         <a href="#"
                             class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-white md:p-0 md:dark:text-blue-500"
@@ -60,9 +64,11 @@
 
 
     <section>
-        <div class="flex items-center w-100 py-52 px-24 justify-between bg-dark">
-            <div>
-                <h1 class="text-[45px] w-[500px] text-white font-bold">Adza Zarif Nur Iskandar.</h1>
+        <div class="flex items-center relative gap-5 w-100 py-52 px-5 md:px-24 justify-between bg-dark flex-col md:flex-row ">
+            <img src="{{ asset('image/bg-tp.png') }}" class="absolute top-[-100px] right-0" alt="">
+            <img src="{{ asset('image/bg-tp.png') }}" class="absolute bottom-0 left-[-170px]" alt="">
+            <div data-aos="fade-up-right" data-aos-once="true" class="z-30">
+                <h1 class="text-[45px] text-white font-bold md:w-[500px]">Adza Zarif Nur Iskandar.</h1>
                 <div class="w-12 my-10 h-[5px] bg-yellow"></div>
                 <div class="flex gap-5">
                     <i class="text-[35px] text-white fa-brands fa-instagram"></i>
@@ -70,10 +76,11 @@
                     <i class="text-[35px] text-white fa-brands fa-github"></i>
                 </div>
             </div>
-            <div class="text-white">
+            <div class="text-white z-30" data-aos="fade-up-left" data-aos-once="true">
                 <p class="text-[22px]">- Introduction</p>
-                <p class="text-[28px] font-bold w-[500px] mt-5">Software Developer, IoT Enginer, AI Developer.</p>
-                <p class="text-[17px] w-[500px] mt-3">Mampu membuat aplikasi untuk kebutuhan dan fungsionalitas pengguna
+                <p class="text-[28px] font-bold md:w-[500px] mt-5">Software Developer, IoT Enginer, AI Enginer.</p>
+                <p class="text-[17px] md:w-[500px] mt-3">Mampu membuat aplikasi untuk kebutuhan dan fungsionalitas
+                    pengguna
                     untuk meningkatkan produktifitas.</p>
                 <a class="text-[17px] mt-3 inline-block text-yellow" href="">Lebih lengkap -></a>
             </div>
@@ -82,20 +89,18 @@
 
     <section>
         <div class="bg-[#242532] py-12">
-            {{-- <h1 class="text-[45px] mb-5 text-center text-white font-bold">
-                < About Me />
-            </h1> --}}
             <div class="flex bg-[#242532] items-center justify-center">
-                <span class="w-64 h-[2px] bg-white"></span>
-                <div class="bg-[#242532] text-center p-5">
+                <span data-aos="zoom-in-right" data-aos-once="true" class="w-64 h-[2px] bg-white"></span>
+                <div data-aos="zoom-in" data-aos-once="true" class="bg-[#242532] text-center p-5">
                     <h1 class="text-[45px] font-bold text-white">About Me</h1>
-                    <p class="text-white mx-auto text-[17px] w-[700px]">Berikut adalah tentang diri saya mulai dari
+                    <p class="text-white mx-auto text-[17px] md:w-[700px]">Berikut adalah tentang diri saya mulai dari
                         profil, skill, pengalaman yang saya miliki</p>
                 </div>
-                <span class="w-64 h-[2px] bg-white"></span>
+                <span data-aos="zoom-in-left" data-aos-once="true" class="w-64 h-[2px] bg-white"></span>
             </div>
-            <div class="flex gap-7 mx-24 p-7 rounded-[20px] shadow-lg shadow-gray-800 bg-[#090C11]">
-                <div class="w-1/3 pr-7 border-r-2">
+            <div
+                class="flex gap-7 md:mx-24 p-7 flex-col md:flex-row rounded-[20px] shadow-lg shadow-gray-800 bg-[#090C11]" data-aos="zoom-in" data-aos-once="true">
+                <div class="md:w-1/3 pr-7 border-r-2" >
                     <div class="flex items-center ">
                         <i class="fa-solid text-[32px] text-yellow fa-folder-open"></i>
                         <p class="text-white text-[20px] ml-3">About Me</p>
@@ -106,16 +111,18 @@
                         <img src="{{ asset('image/logo/js.png') }}" class="w-[33px]" alt="">
                         <p class="text-white text-[20px] ml-3">index.js</p>
                     </div>
+                    <div id="btnPengalaman" class="flex items-center ms-3 my-5 hover:cursor-pointer rounded p-2">
+                        <p class="text-white text-[20px] mr-3">></p>
+                        {{-- <img src="{{ asset('image/logo/js.png') }}" class="w-[33px]" alt=""> --}}
+                        <i class="fa-solid fa-image text-white text-[32px]"></i>
+                        <p class="text-white text-[20px] ml-3">pengalaman.jpg</p>
+                    </div>
                     <div id="btnSkill" class="flex items-center ms-3 my-5 hover:cursor-pointer rounded p-2">
                         <p class="text-white text-[20px] mr-3">></p>
                         <img src="{{ asset('image/logo/js.png') }}" class="w-[33px]" alt="">
                         <p class="text-white text-[20px] ml-3">skill.js</p>
                     </div>
-                    <div id="btnPengalaman" class="flex items-center ms-3 my-5 hover:cursor-pointer rounded p-2">
-                        <p class="text-white text-[20px] mr-3">></p>
-                        <img src="{{ asset('image/logo/js.png') }}" class="w-[33px]" alt="">
-                        <p class="text-white text-[20px] ml-3">pengalaman.js</p>
-                    </div>
+
                 </div>
                 <div class="w-2/3">
                     <div class="flex justify-between">
@@ -136,33 +143,102 @@
                         </p>
                         <p class="text-white mb-3"><span class="text-yellow">var </span>hobi =
                             [“traveling”,”membaca”,”bermain game”];</p>
-                        <p class="text-white mb-3"><span class="text-yellow">var </span>deskripsi = “I am an
-                            information technology student at Jember State Polytechnic. My love for software is the fuel
-                            that fuels my passion to continue learning and developing. Outside of programming I like
-                            traveling and being a photographer.”;</p>
+                        <p class="text-white mb-3"><span class="text-yellow">var </span>deskripsi = “Saya adalah
+                            seorang Software Developer dengan pengalaman 3+ tahun di bidang IT. dan saya merupakan mahasiswa Teknologi Informasi di Politeknik Negeri Jember. Kecintaan saya pada
+                            perangkat lunak menjadi bahan bakar semangat untuk terus belajar dan berkembang. Saya
+                            menyukai pemrograman, bepergian, dan fotografi. Selain itu, saya suka mencoba hal-hal baru,
+                            yang membuat saya terus memperluas wawasan dan keterampilan. Saya juga memiliki bakat di
+                            bidang perangkat lunak, perangkat keras, serta kecerdasan buatan (AI).”;</p>
                     </div>
                     <div id="skill">
                         <p class="text-white mb-3"><span class="text-yellow">var </span>front-end = ["html", "css",
                             "js","tailwind", "jquery", "react"];</p>
                         <p class="text-white mb-3"><span class="text-yellow">var </span>back-end =
-                            ["php","nodejs","laravel","java","python","c++"];</p>
+                            ["php","nodejs","laravel","java", "python","c++"];</p>
                         <p class="text-white mb-3"><span class="text-yellow">var </span>database =
                             ["mysql","mongodb"];</p>
                         <p class="text-white mb-3"><span class="text-yellow">var </span>tool =
-                            ["git","github","figma","dbdiagram","visual studio code","arduino"];</p>
+                            ["git","github","figma","dbdiagram","visual studio code" ,"arduino"];</p>
                     </div>
                     <div id="pengalaman">
-                        <p class="text-white mb-3"><span class="text-yellow">var </span>pengalaman = [</p>
-                        <p class="ml-48 text-white">{"name": "Akasha Shatya Wibawa",<br /> "date": "november
-                            2022-february 2023",<br /> "deskripsi": "Membuat website portfolio untuk perusahaan"},</p>
-                        </p>
-                        <p class="ml-48 text-white">{"name": "Akasha Shatya Wibawa",<br /> "date": "november
-                            2022-february 2023",<br /> "deskripsi": "Membuat website portfolio untuk perusahaan"},</p>
-                        </p>
-                        <p class="ml-48 text-white">{"name": "Akasha Shatya Wibawa",<br /> "date": "november
-                            2022-february 2023",<br /> "deskripsi": "Membuat website portfolio untuk perusahaan"},</p>
-                        </p>
-                        <p class="text-white mb-3 ml-[160px]">]</p>
+                        <div class="flex flex-col items-center w-[430px] md:w-full space-y-8 bg-gradient-to-b from-gray-900 to-gray-800 text-white md:py-12 md:px-6">
+                            <!-- Timeline Container -->
+                            <div class="relative w-full max-w-xl">
+                                <!-- Timeline Line -->
+                                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-600"></div>
+
+                                <!-- Timeline Item -->
+                                <div class="relative flex items-center space-x-6">
+                                    <!-- Circle Indicator -->
+                                    <div
+                                        class="absolute left-1/2 transform -translate-x-1/2 bg-white h-4 w-4 rounded-full border-4 border-gray-900">
+                                    </div>
+                                    <!-- Content Left -->
+                                    <div class="w-1/2 text-right pr-6">
+                                        <h3 class="font-bold text-lg">Fullstack Web Developer</h3>
+                                        <p class="text-sm text-gray-400">Upylon/Proform (2024 - Now)</p>
+                                        <p class="text-sm">Mengembangkan bisnis jasa software development bersama tim
+                                            berpengalaman</p>
+                                    </div>
+                                    <!-- Empty Right -->
+                                    <div class="w-1/2"></div>
+                                </div>
+
+                                <!-- Timeline Item -->
+                                <div class="relative flex items-center space-x-6 mt-12">
+                                    <!-- Circle Indicator -->
+                                    <div
+                                        class="absolute left-1/2 transform -translate-x-1/2 bg-white h-4 w-4 rounded-full border-4 border-gray-900">
+                                    </div>
+                                    <!-- Empty Left -->
+                                    <div class="w-1/2"></div>
+                                    <!-- Content Right -->
+                                    <div class="w-1/2 text-left pl-6">
+                                        <h3 class="font-bold text-lg">Fullstack Web Developer</h3>
+                                        <p class="text-sm text-gray-400">Thalassa Blue (2024 - Now)</p>
+                                        <p class="text-sm">Membuat aplilasi pemesanan boat dan trip untuk perusahaan
+                                            Thalassa Blue</p>
+                                    </div>
+                                </div>
+
+                                <!-- Timeline Item -->
+                                <div class="relative flex items-center space-x-6 mt-12">
+                                    <!-- Circle Indicator -->
+                                    <div
+                                        class="absolute left-1/2 transform -translate-x-1/2 bg-white h-4 w-4 rounded-full border-4 border-gray-900">
+                                    </div>
+                                    <!-- Content Left -->
+
+                                    <div class="w-1/2 text-right pr-6">
+                                        <h3 class="font-bold text-lg">Front End Web Developer</h3>
+                                        <p class="text-sm text-gray-400">Kilau Sri Purnama (2022)</p>
+                                        <p class="text-sm">Membuat website portfolio yang bergerak di bidang
+                                            transportasi perusahaan Kilau Sri Purnama</p>
+                                    </div>
+                                    <!-- Empty Right -->
+                                    <div class="w-1/2"></div>
+                                </div>
+
+                                <!-- Timeline Item -->
+                                <div class="relative flex items-center space-x-6 mt-12">
+                                    <!-- Circle Indicator -->
+                                    <div
+                                        class="absolute left-1/2 transform -translate-x-1/2 bg-white h-4 w-4 rounded-full border-4 border-gray-900">
+                                    </div>
+                                    <!-- Empty Left -->
+                                    <div class="w-1/2"></div>
+                                    <!-- Content Right -->
+                                    <div class="w-1/2 text-left pl-6">
+                                        <h3 class="font-bold text-lg">Front End Web Developer</h3>
+                                        <p class="text-sm text-gray-400">Akasha Shatya Wibawa (2021)</p>
+                                        <p class="text-sm">Membuat website portfolio perusahaan Akasha Shatya Wibawa
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -170,20 +246,21 @@
     </section>
 
     <section>
-        <div class="bg-dark py-12">
-            <div class="flex mb-5 bg-dark items-center justify-center">
-                <span class="w-64 h-[2px] bg-white"></span>
-                <div class="bg-dark text-center p-5">
+        <div class="bg-dark py-12" > 
+            <div class="flex mb-5 bg-dark items-center justify-center" >
+                <span data-aos="zoom-in-right" data-aos-once="true" data-aos-offset="-500" class="w-64 h-[2px] bg-white"></span>
+                <div data-aos="zoom-in" data-aos-once="true" data-aos-offset="-500" class="bg-dark text-center p-5">
                     <h1 class="text-[45px] font-bold text-white">My Achievements
                     </h1>
-                    <p class="text-white mx-auto text-[17px] w-[700px]">Penghargaan yang saya miliki ketika mengikuti
+                    <p class="text-white mx-auto text-[17px] md:w-[700px]">Penghargaan yang saya miliki ketika
+                        mengikuti
                         lomba lomba Nasional. dan beberapa penghargaan ketika mengikuti lomba dikampus</p>
                 </div>
-                <span class="w-64 h-[2px] bg-white"></span>
+                <span data-aos="zoom-in-left" data-aos-once="true" data-aos-offset="-500" class="w-64 h-[2px] bg-white"></span>
             </div>
-            <div class="flex flex-col gap-5 items-center justify-center">
+            <div class="flex flex-col px-5 gap-5 items-center justify-center">
                 <!-- Card Content -->
-                <div class="relative pb-8 px-8 pt-28 w-[900px] bg-[#242532] rounded-[20px]">
+                <div data-aos="zoom-in" data-aos-once="true" data-aos-offset="-500" class="relative pb-8 px-8 pt-28 md:w-[900px] w-full bg-[#242532] rounded-[20px]" >
                     <div class="absolute top-[-3px] z-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 128 128">
                             <path fill="#176cc7"
@@ -208,8 +285,8 @@
                     <h1 class="text-white text-[25px] text-center font-semibold">
                         1st Winner Governance Category - UM SDGs Hackathon National Competition 2024</h1>
 
-                    <div class="flex gap-5 mt-5 justify-center">
-                        <div class="swiper w-1/2 mySwiper">
+                    <div class="flex gap-5 flex-col md:flex-row mt-5 justify-center">
+                        <div class="swiper w-full md:w-1/2  mySwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <img src="{{ asset('image/sertifikat/um.png') }}" alt="">
@@ -223,7 +300,7 @@
                             <div class="swiper-pagination"></div>
                         </div>
 
-                        <div class="w-1/2">
+                        <div class="w-full md:w-1/2">
                             <p class="text-white">Kompetisi ini terdiri dari bebrapa bagian, yaitu:</p>
                             <ul class="text-white">
                                 <li>1. Membuat software yang mendukung keberhasilan SDGs dalam waktu 24 jam full</li>
@@ -236,7 +313,7 @@
                     </div>
                 </div>
 
-                <div class="relative pb-8 px-8 pt-28 w-[900px] bg-[#242532] rounded-[20px]">
+                <div data-aos="zoom-in" data-aos-once="true" data-aos-offset="-500"  class="relative pb-8 px-8 pt-28 w-full md:w-[900px] bg-[#242532] rounded-[20px]">
                     <div class="absolute top-[-3px] z-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 128 128">
                             <path fill="#176cc7"
@@ -261,8 +338,8 @@
                     <h1 class="text-white text-[25px] text-center font-semibold">
                         3rd Winner Hackthon Software Development Category - National Competition Play IT</h1>
 
-                    <div class="flex gap-5 mt-5 justify-center">
-                        <div class="swiper w-1/2 mySwiper">
+                    <div class="flex gap-5 mt-5 flex-col md:flex-row justify-center">
+                        <div class="swiper w-full md:w-1/2 mySwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <img src="{{ asset('image/sertifikat/polinema.png') }}" alt="">
@@ -276,7 +353,7 @@
                             <div class="swiper-pagination"></div>
                         </div>
 
-                        <div class="w-1/2">
+                        <div class="w-full md:w-1/2">
                             <p class="text-white">Kompetisi ini terdiri dari bebrapa bagian, yaitu:</p>
                             <ul class="text-white">
                                 <li>1. Membuat Generative AI dengan waktu 24 jam full</li>
@@ -299,44 +376,46 @@
 
     <section class="bg-dark py-10">
         <div class="flex bg-dark items-center justify-center">
-            <span class="w-64 h-[2px] bg-white"></span>
-            <div class="bg-dark text-center p-5">
+            <span data-aos="zoom-in-right" data-aos-once="true" data-aos-offset="-400"  class="w-64 h-[2px] bg-white"></span>
+            <div data-aos="zoom-in" data-aos-once="true" data-aos-offset="-400"  class="bg-dark text-center p-5">
                 <h1 class="text-[45px] font-bold text-white">My Project</h1>
-                <p class="text-white mx-auto text-[17px] w-[700px]">Berikut project - project yang pernah saya buat
+                <p class="text-white mx-auto text-[17px] md:w-[700px]">Berikut project - project yang pernah saya buat
                     dengan berbagai platform seperti Web, IoT, Artifical Intelligence dan Desktop</p>
             </div>
-            <span class="w-64 h-[2px] bg-white"></span>
+            <span data-aos="zoom-in-left" data-aos-once="true" data-aos-offset="-400"  class="w-64 h-[2px] bg-white"></span>
         </div>
 
-        <div class="flex justify-center px-20 flex-wrap gap-10 bg-dark">
+        <div class="flex justify-center px-5 md:px-20 flex-wrap md:gap-10 bg-dark">
 
             @for ($i = 1; $i < 6; $i++)
                 <div
-                    class="w-[600px] flex gap-5 duration-300 relative mt-5 hover:border-white p-5 bg-[#242532] rounded-[10px] border border-slate-500">
-                    <div class="swiper w-1/2 mySwiper">
+                    class="w-full md:w-[600px] flex flex-col md:flex-row gap-5 duration-300 relative mt-5 hover:border-white p-5 bg-[#242532] rounded-[10px] border border-slate-500" data-aos="zoom-in" data-aos-once="true" data-aos-offset="-700" >
+                    <div class="swiper w-full md:w-1/2 mySwiper">
                         <div class="swiper-wrapper">
 
                             <div class="swiper-slide">
                                 <div class="relative ">
-                                    <img src=" {{ asset('image/laptop.png') }}" alt="">
-                                    <div class="absolute z-10 top-4 left-[34px] w-[192px] h-full">
+                                    <img class="hidden md:block" src=" {{ asset('image/laptop.png') }}"
+                                        alt="">
+                                    <div class="md:absolute z-10 top-4 left-[34px] w-full md:w-[192px] h-full">
                                         <img class="rounded" src=" {{ asset('image/project1.png') }}" alt="">
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="relative ">
-                                    <img src=" {{ asset('image/laptop.png') }}" alt="">
-                                    <div class="absolute z-10 top-4 left-[34px] w-[192px] h-full">
-                                        <img class="rounded" src=" {{ asset('image/project1.png') }}"
-                                            alt="">
+                                    <img class="hidden md:block" src=" {{ asset('image/laptop.png') }}"
+                                        alt="">
+                                    <div class="md:absolute z-10 top-4 left-[34px] w-full md:w-[192px] h-full">
+                                        <img class="rounded" src=" {{ asset('image/project1.png') }}" alt="">
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="relative ">
-                                    <img src=" {{ asset('image/laptop.png') }}" alt="">
-                                    <div class="absolute z-10 top-4 left-[34px] w-[192px] h-full">
+                                    <img class="hidden md:block" src=" {{ asset('image/laptop.png') }}"
+                                        alt="">
+                                    <div class="md:absolute z-10 top-4 left-[34px] w-full md:w-[192px] h-full">
                                         <img class="rounded" src=" {{ asset('image/project1.png') }}"
                                             alt="">
                                     </div>
@@ -347,7 +426,7 @@
                         <div class="swiper-pagination"></div>
                     </div>
 
-                    <div class="w-1/2">
+                    <div class="w-full md:w-1/2">
                         <div class="flex flex-col justify-between h-full">
                             <div>
                                 <h1 class="text-white text-[22px] font-semibold">Attar</h1>
@@ -355,99 +434,84 @@
                                     adipisicing
                                     elit. Nostrum
                                     aliquid ipsam facere,</p>
-                                    <p class="text-white mt-1 text-[17px]">Detail -></p>
+                                <a href="#"
+                                    class="text-white mt-2 inline-block hover:text-yellow duration-300 text-[17px]">Detail
+                                    -></a>
                             </div>
-                            <div class="swiper w-full mySwiperTech">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="border border-yellow rounded-[20px] p-2">
-                                            <p class="text-yellow text-center text-[15px]"><i
-                                                    class="fa-solid fa-screwdriver-wrench"></i> PHP</p>
-                                        </div>
+                            <div class="wrapper mt-5">
+                                <div class="itemLeft w-[100px] item1">
+                                    <div class="border border-yellow rounded-[20px] p-2">
+                                        <p class="text-yellow text-center text-[15px]"><i
+                                                class="fa-solid fa-screwdriver-wrench"></i> PHP</p>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="border border-yellow rounded-[20px] p-2">
-                                            <p class="text-yellow text-center text-[15px]"><i
-                                                    class="fa-solid fa-screwdriver-wrench"></i> HTML</p>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="border border-yellow rounded-[20px] p-2">
-                                            <p class="text-yellow text-center text-[15px]"><i
-                                                    class="fa-solid fa-screwdriver-wrench"></i> CSS</p>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="border border-yellow rounded-[20px] p-2">
-                                            <p class="text-yellow text-center text-[15px]"><i
-                                                    class="fa-solid fa-screwdriver-wrench"></i> MySQL</p>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="border border-yellow rounded-[20px] p-2">
-                                            <p class="text-yellow text-center text-[15px]"><i
-                                                    class="fa-solid fa-screwdriver-wrench"></i> JQuery</p>
-                                        </div>
-                                    </div>
-
                                 </div>
-
+                                <div class="itemLeft w-[100px] item2">
+                                    <div class="border border-yellow rounded-[20px] p-2">
+                                        <p class="text-yellow text-center text-[15px]"><i
+                                                class="fa-solid fa-screwdriver-wrench"></i> JQuery</p>
+                                    </div>
+                                </div>
+                                <div class="itemLeft w-[100px] item3">
+                                    <div class="border border-yellow rounded-[20px] p-2">
+                                        <p class="text-yellow text-center text-[15px]"><i
+                                                class="fa-solid fa-screwdriver-wrench"></i> MySQL</p>
+                                    </div>
+                                </div>
+                                <div class="itemLeft item4">
+                                    <div class="border border-yellow rounded-[20px] p-2">
+                                        <p class="text-yellow text-center text-[15px]"><i
+                                                class="fa-solid fa-screwdriver-wrench"></i> CSS</p>
+                                    </div>
+                                </div>
+                                <div class="itemLeft item5">
+                                    <div class="border border-yellow rounded-[20px] p-2">
+                                        <p class="text-yellow text-center text-[15px]"><i
+                                                class="fa-solid fa-screwdriver-wrench"></i> HTML</p>
+                                    </div>
+                                </div>
+                                <div class="itemLeft item6">
+                                    <div class="border border-yellow rounded-[20px] p-2">
+                                        <p class="text-yellow text-center text-[15px]"><i
+                                                class="fa-solid fa-screwdriver-wrench"></i> PHP</p>
+                                    </div>
+                                </div>
+                                <div class="itemLeft item7">
+                                    <div class="border border-yellow rounded-[20px] p-2">
+                                        <p class="text-yellow text-center text-[15px]"><i
+                                                class="fa-solid fa-screwdriver-wrench"></i> PHP</p>
+                                    </div>
+                                </div>
+                                <div class="itemLeft item8">
+                                    <div class="border border-yellow rounded-[20px] p-2">
+                                        <p class="text-yellow text-center text-[15px]"><i
+                                                class="fa-solid fa-screwdriver-wrench"></i> PHP</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             @endfor
 
-            {{-- @for ($i = 1; $i < 6; $i++)
-                <div
-                    class="w-[330px] duration-300 relative mt-32 hover:border-white px-4 pt-28 bg-grey rounded-[10px] border border-slate-500">
-                    <img class="absolute top-[-100px] rounded" width="300px" src="{{ asset('image/project1.png') }}"
-                        alt="">
-                    <h1 class="text-white text-[25px] text-center font-semibold">Travel Umrah</h1>
-                    <p class="text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                        aliquid ipsam facere, assumenda natus quibusdam, sapiente, quo at odio ad architecto animi
-                        dignissimos exercitationem debitis sint magnam incidunt maiores impedit.</p>
-
-                    <div class="flex m-5 justify-center flex-wrap gap-5">
-                        <div class="flex items-center gap-4">
-                            <img width="60px" src="{{ asset('image/logo/mysql.png') }}" alt="">
-                            <p class="text-white text-[15px]">MYSQL</p>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <img width="60px" src="{{ asset('image/logo/html.png') }}" alt="">
-                            <p class="text-white text-[15px]">HTML</p>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <img width="60px" src="{{ asset('image/logo/php.png') }}" alt="">
-                            <p class="text-white text-[15px]">PHP</p>
-                        </div>
-                        <small class="text-white"><i class="fa-solid mr-3 fa-calendar-days"></i>Published: 20 juni
-                            2024</small>
-                    </div>
-
-
-                    <a href="" class="bg-white inline-block p-3 rounded">Lihat Detail</a> 
-        </div>
-        @endfor --}}
         </div>
     </section>
 
     <section class="bg-dark">
         <img class="w-full" src="{{ asset('image/polygon3.png') }}" alt="">
         <div class="flex bg-[#242532] items-center justify-center">
-            <span class="w-64 h-[2px] bg-white"></span>
-            <div class="bg-[#242532] text-center p-5">
+            <span data-aos="zoom-in-right" data-aos-once="true" data-aos-offset="-500" class="w-64 h-[2px] bg-white"></span>
+            <div data-aos="zoom-in" data-aos-once="true" data-aos-offset="-500" class="bg-[#242532] text-center p-5">
                 <h1 class="text-[45px] font-bold text-white">Blogs</h1>
-                <p class="text-white mx-auto text-[17px] w-[700px]">Terdapat catatan , pengalaman, pengembangan yang
+                <p class="text-white mx-auto text-[17px] md:w-[700px]">Terdapat catatan , pengalaman, pengembangan yang
                     saya tulis untuk menambah pengetahuan</p>
             </div>
-            <span class="w-64 h-[2px] bg-white"></span>
+            <span data-aos="zoom-in-left" data-aos-once="true" data-aos-offset="-500" class="w-64 h-[2px] bg-white"></span>
         </div>
 
-        <div class="flex gap-5 px-28 pt-10 pb-28 bg-[#242532]">
-            <div class="w-2/3">
+        <div class="flex flex-col md:flex-row gap-5 px-5 md:px-28 pt-10 pb-28 bg-[#242532]">
+            <div class="md:w-2/3">
                 <p class="text-white text-[25px] mb-3"><i class="mr-3 fa-solid fa-rocket"></i>Paling Populer</p>
-                <div class="p-5 w-full inline-block bg-dark rounded-[20px]">
+                <div data-aos="zoom-in-up" data-aos-once="true" data-aos-offset="-500" class="p-5 w-full inline-block bg-dark rounded-[20px]">
                     <img class="w-full rounded-[20px]" src="{{ asset('image/lomba/um.jpg') }}" alt="">
                     <p class="text-white text-[25px] mt-5">Play IT Polinema National Competition 2024</p>
                     <p class="text-slate-300 mt-2 text-[15px]">Ini pengalaman saya ketika mengikuti lomba IT Polinema
@@ -479,8 +543,8 @@
                     </div>
                 </div>
             </div>
-            <div class="w-1/3">
-                <div class="p-3 mb-3 bg-dark rounded-[20px]">
+            <div class="md:w-1/3">
+                <div data-aos="zoom-in-up" data-aos-once="true" data-aos-offset="-500" class="p-3 mb-3 bg-dark rounded-[20px]">
                     <img class="w-full rounded-[20px]" src="{{ asset('image/lomba/um.jpg') }}" alt="">
                     <p class="text-white text-[20px] mt-5">Play IT Polinema National Competition 2024</p>
 
@@ -494,7 +558,7 @@
                         <p class="text-slate-300 text-[14px]">Bagikan<i class="ml-2 fa-solid fa-share"></i></p>
                     </div>
                 </div>
-                <div class="p-3 mb-3 bg-dark rounded-[20px]">
+                <div data-aos="zoom-in-up" data-aos-once="true" data-aos-offset="-500" class="p-3 mb-3 bg-dark rounded-[20px]">
                     <img class="w-full rounded-[20px]" src="{{ asset('image/lomba/um.jpg') }}" alt="">
                     <p class="text-white text-[20px] mt-5">Play IT Polinema National Competition 2024</p>
 
@@ -508,22 +572,124 @@
                         <p class="text-slate-300 text-[14px]">Bagikan<i class="ml-2 fa-solid fa-share"></i></p>
                     </div>
                 </div>
-                <a href="#" class="text-yellow mt-5 inline-block w-full text-center text-[18px] p-3 rounded-[20px]">Lihat seluruh lomba -></a>
+                <a href="#"
+                    class="text-yellow mt-5 inline-block w-full text-center text-[18px] p-3 rounded-[20px]">Lihat
+                    seluruh Blog -></a>
             </div>
         </div>
 
         <img class="w-full" src="{{ asset('image/polygon5.png') }}" alt="">
     </section>
 
-    <footer class="p-4 bg-dark dark:bg-gray-900 text-white">
+    <section>
+        <div class="bg-dark h-[550px] relative py-5">
+            <p class="absolute text-[#242532] text-[110px] md:text-[290px] md:top-0 top-[100px] z-0 md:right-40 rotate-[-10deg] font-bold">Gallery</p>
+            <img src="{{ asset('image/bg-tp.png') }}" class="absolute bottom-0 w-[400px] left-[-150px]" alt="">
+            <div  class="wrapperImage mb-5 rotate-[10deg]">
+                <div class="itemLeftImage item1">
+                    <img src="{{ asset('image/lomba/um.jpg') }}" alt="">
+                </div>
+                <div class="itemLeftImage item2">
+                    <img src="{{ asset('image/lomba/polinema.jpg') }}" alt="">
+                </div>
+                <div class="itemLeftImage item3">
+                    <img src="{{ asset('image/lomba/um.jpg') }}" alt="">
+                </div>
+                <div class="itemLeftImage item4">
+                    <img src="{{ asset('image/lomba/polinema.jpg') }}" alt="">
+                </div>
+                <div class="itemLeftImage item5">
+                    <img src="{{ asset('image/lomba/um.jpg') }}" alt="">
+                </div>
+                <div class="itemLeftImage item6">
+                    <img src="{{ asset('image/lomba/polinema.jpg') }}" alt="">
+                </div>
+                <div class="itemLeftImage item7">
+                    <img src="{{ asset('image/lomba/um.jpg') }}" alt="">
+                </div>
+                <div class="itemLeftImage item8">
+                    <img src="{{ asset('image/lomba/polinema.jpg') }}" alt="">
+                </div>
+            </div>
+            <div class="wrapperImage z-20 rotate-[10deg]">
+                <div class="itemRightImage item1">
+                    <img src="{{ asset('image/lomba/um.jpg') }}" alt="">
+                </div>
+                <div class="itemRightImage item2">
+                    <img src="{{ asset('image/lomba/polinema.jpg') }}" alt="">
+                </div>
+                <div class="itemRightImage item3">
+                    <img src="{{ asset('image/lomba/um.jpg') }}" alt="">
+                </div>
+                <div class="itemRightImage item4">
+                    <img src="{{ asset('image/lomba/polinema.jpg') }}" alt="">
+                </div>
+                <div class="itemRightImage item5">
+                    <img src="{{ asset('image/lomba/um.jpg') }}" alt="">
+                </div>
+                <div class="itemRightImage item6">
+                    <img src="{{ asset('image/lomba/polinema.jpg') }}" alt="">
+                </div>
+                <div class="itemRightImage item7">
+                    <img src="{{ asset('image/lomba/um.jpg') }}" alt="">
+                </div>
+                <div class="itemRightImage item8">
+                    <img src="{{ asset('image/lomba/polinema.jpg') }}" alt="">
+                </div>
+                <div class="itemRightImage item7">
+                    <img src="{{ asset('image/lomba/um.jpg') }}" alt="">
+                </div>
+                <div class="itemRightImage item8">
+                    <img src="{{ asset('image/lomba/polinema.jpg') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="bg-[#242532] py-32">
+            <div class="flex bg-[#242532] items-center justify-center">
+                <span class="w-64 h-[2px] bg-white"></span>
+                <div class="bg-[#242532] text-center p-5">
+                    <h1 class="text-[45px] font-bold text-white">Contact Saya</h1>
+
+                </div>
+                <span class="w-64 h-[2px] bg-white"></span>
+            </div>
+            <div class="px-5 md:px-36 text-center">
+                <p class="text-yellow text-[20px]">Adza Zarif Nur Iskandar</p>
+                <div class="flex justify-center gap-5 mb-5 text-white">
+                    <p class="text-[18px]">-> Software Developer</p>
+                    <p class="text-[18px]">-> IoT Enginer</p>
+                    <p class="text-[18px]">-> AI Enginer</p>
+                </div>
+                <p class="text-white">Jangan ragu untuk menghubungi saya jika ada pertanyaan, saran, atau kritik. Jika
+                    anda ingin membuat sebuah proyek, jangan ragu untuk menghubungi saya. saya siap membantu anda.</p>
+                <div class="flex justify-center mt-5 gap-5">
+                    <a href="https://github.com/AdzaZarif" target="_blank"
+                        class="text-yellow border border-yellow p-3 rounded-[20px]"><i
+                            class="fa-brands fa-github"></i> adza zarif</a>
+                    <a href="https://www.instagram.com/adza_zarif/" target="_blank"
+                        class="text-yellow border border-yellow p-3 rounded-[20px]"><i
+                            class="fa-brands fa-instagram"></i> adzazarifnur</a>
+                    <a href="https://www.linkedin.com/in/adza-zarif/" target="_blank"
+                        class="text-yellow border border-yellow p-3 rounded-[20px]"><i
+                            class="fa-brands fa-linkedin"></i> Adza Zarif Nur Iskandar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="p-4 bg-[#242532] text-center dark:bg-gray-900 text-white">
         <small>@ 2023 Copyright: Developed by Adza Zarif Nur Iskandar</small>
     </footer>
 
     <script>
+          AOS.init();
         $(document).ready(function() {
             $('#skill').hide();
-            $('#pengalaman').hide();
-            $('#btnAboutme').addClass('active-about');
+            $('#aboutme').hide();
+            $('#btnPengalaman').addClass('active-about');
             $('#lblFile').html('index.js');
 
             $('#btnPengalaman').click(function() {
@@ -533,7 +699,7 @@
                 $('#btnAboutme').removeClass('active-about');
                 $('#btnSkill').removeClass('active-about');
                 $('#btnPengalaman').addClass('active-about');
-                $('#lblFile').html('pengalaman.js');
+                $('#lblFile').html('pengalaman.jpg');
             });
 
             $('#btnSkill').click(function() {
@@ -600,6 +766,9 @@
             //   },
         });
     </script>
+        @vite('resources/js/app.js')
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.0.0/dist/flowbite.min.js"></script>
+
 </body>
 
 </html>
