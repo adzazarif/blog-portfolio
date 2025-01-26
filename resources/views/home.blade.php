@@ -22,7 +22,7 @@
     <div class="w-full h-[100vh] bg-dark z-50 fixed inset-0 flex justify-center items-center" id="loader">
         <img src="{{ asset('image/bg-tp.png') }}" class="absolute animate-bounce top-[-100px] right-0" alt="">
         <img src="{{ asset('image/bg-tp.png') }}" class="absolute animate-bounce bottom-0 left-[-170px]" alt="">
-        <div class="loader-text">
+        <div class="loader-text m-0 md:m-8">
 
         </div>
     </div>
@@ -103,13 +103,13 @@
     <section id="about">
         <div class="bg-[#242532] py-12">
             <div class="flex bg-[#242532] items-center justify-center">
-                <span data-aos="zoom-in-right" data-aos-once="true" class="w-64 h-[2px] bg-white"></span>
+                <span data-aos="zoom-in" data-aos-once="true" class="w-64 h-[2px] bg-white"></span>
                 <div data-aos="zoom-in" data-aos-once="true" class="bg-[#242532] text-center p-5">
                     <h1 class="text-[45px] font-bold text-white">About Me</h1>
                     <p class="text-white mx-auto text-[17px] md:w-[700px]">Berikut adalah tentang diri saya mulai dari
                         profil, skill, pengalaman yang saya miliki</p>
                 </div>
-                <span data-aos="zoom-in-left" data-aos-once="true" class="w-64 h-[2px] bg-white"></span>
+                <span data-aos="zoom-in" data-aos-once="true" class="w-64 h-[2px] bg-white"></span>
             </div>
             <div class="flex gap-7 md:mx-24 p-7 flex-col md:flex-row rounded-[20px] shadow-lg shadow-gray-800 bg-[#090C11]"
                 data-aos="zoom-in" data-aos-once="true">
@@ -176,7 +176,7 @@
                     </div>
                     <div id="pengalaman">
                         <div
-                            class="flex flex-col items-center w-[430px] md:w-full space-y-8 bg-gradient-to-b from-gray-900 to-gray-800 text-white md:py-12 md:px-6">
+                            class="flex flex-col items-center w-[350px] md:w-full space-y-8 bg-gradient-to-b from-gray-900 to-gray-800 text-white md:py-12 md:px-6">
                             <!-- Timeline Container -->
                             <div class="relative w-full max-w-xl">
                                 <!-- Timeline Line -->
@@ -263,7 +263,7 @@
     <section id="achievements">
         <div class="bg-dark py-12">
             <div class="flex mb-5 bg-dark items-center justify-center">
-                <span data-aos="zoom-in-right" data-aos-once="true" data-aos-offset="-500"
+                <span data-aos="zoom-in" data-aos-once="true" data-aos-offset="-500"
                     class="w-64 h-[2px] bg-white"></span>
                 <div data-aos="zoom-in" data-aos-once="true" data-aos-offset="-500" class="bg-dark text-center p-5">
                     <h1 class="text-[45px] font-bold text-white">My Achievements
@@ -272,7 +272,7 @@
                         mengikuti
                         lomba lomba Nasional. dan beberapa penghargaan ketika mengikuti lomba dikampus</p>
                 </div>
-                <span data-aos="zoom-in-left" data-aos-once="true" data-aos-offset="-500"
+                <span data-aos="zoom-in" data-aos-once="true" data-aos-offset="-500"
                     class="w-64 h-[2px] bg-white"></span>
             </div>
             <div class="flex flex-col px-5 gap-5 items-center justify-center">
@@ -393,14 +393,14 @@
 
     <section id="project" class="bg-dark py-10">
         <div class="flex bg-dark items-center justify-center">
-            <span data-aos="zoom-in-right" data-aos-once="true" data-aos-offset="-400"
+            <span data-aos="zoom-in" data-aos-once="true" data-aos-offset="-400"
                 class="w-64 h-[2px] bg-white"></span>
             <div data-aos="zoom-in" data-aos-once="true" data-aos-offset="-400" class="bg-dark text-center p-5">
                 <h1 class="text-[45px] font-bold text-white">My Project</h1>
                 <p class="text-white mx-auto text-[17px] md:w-[700px]">Berikut project - project yang pernah saya buat
                     dengan berbagai platform seperti Web, IoT, Artifical Intelligence dan Desktop</p>
             </div>
-            <span data-aos="zoom-in-left" data-aos-once="true" data-aos-offset="-400"
+            <span data-aos="zoom-in" data-aos-once="true" data-aos-offset="-400"
                 class="w-64 h-[2px] bg-white"></span>
         </div>
 
@@ -502,7 +502,7 @@
     <section id="blog" class="bg-dark">
         <img class="w-full" src="{{ asset('image/polygon3.png') }}" alt="">
         <div class="flex bg-[#242532] items-center justify-center">
-            <span data-aos="zoom-in-right" data-aos-once="true" data-aos-offset="-500"
+            <span data-aos="zoom-in" data-aos-once="true" data-aos-offset="-500"
                 class="w-64 h-[2px] bg-white"></span>
             <div data-aos="zoom-in" data-aos-once="true" data-aos-offset="-500"
                 class="bg-[#242532] text-center p-5">
@@ -510,7 +510,7 @@
                 <p class="text-white mx-auto text-[17px] md:w-[700px]">Terdapat catatan , pengalaman, pengembangan yang
                     saya tulis untuk menambah pengetahuan</p>
             </div>
-            <span data-aos="zoom-in-left" data-aos-once="true" data-aos-offset="-500"
+            <span data-aos="zoom-in" data-aos-once="true" data-aos-offset="-500"
                 class="w-64 h-[2px] bg-white"></span>
         </div>
 
@@ -600,7 +600,7 @@
     <section>
         <div class="bg-dark h-[550px] relative py-5">
             <p
-                class="absolute text-[#242532] text-[110px] md:text-[290px] md:top-0 top-[100px] z-0 md:right-40 rotate-[-10deg] font-bold">
+                class="absolute text-[#242532] hidden md:block text-[110px] md:text-[290px] md:top-0 top-[100px] z-0 md:right-40 rotate-[-10deg] font-bold">
                 Gallery</p>
             <img src="{{ asset('image/bg-tp.png') }}" class="absolute bottom-0 w-[400px] left-[-150px]"
                 alt="">
