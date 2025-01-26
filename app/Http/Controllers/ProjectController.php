@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -11,7 +12,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return view("admin.layouts.project");
+        $projects = Project::all();
+        return view("admin.layouts.project", compact('projects'));
     }
 
     /**
@@ -19,7 +21,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return view("admin.layouts.form-project");
     }
 
     /**
@@ -27,7 +29,21 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $file = $request->file('image');
+        foreach ($file as $f) {
+            $name = rand(1000, 10000) . time(). '.' . $f->getClientOriginalExtension();
+            $f->move(public_path('images-project'), $name);
+            $data[] = $name;
+        }
+
+        Project::create([
+            'title' => $request->title,
+            'slug' => $request->slug,
+            'description' => $request->description,
+            'image' => implode(',', $data),
+        ]);
+
+        return redirect()->route('project.index');
     }
 
     /**
@@ -59,6 +75,7 @@ class ProjectController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Project::destroy($id);
+        return redirect()->route('project.index');
     }
 }

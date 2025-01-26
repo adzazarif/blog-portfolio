@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,27 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [LandingPageController::class, 'index'])->name('landing.index');
 route::prefix('admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::resource('project',ProjectController::class);
 });
-
-Route::get('/home', function () {
-    return view('home');
-});
-
-Route::get('/donasi', function () {
-    return view('donasi');
-});
-Route::get('/detail-donasi', function () {
-    return view('detail-donasi');
-});
-Route::get('/form-donasi', function () {
-    return view('form-donasi');
-});
-Route::get('/form-laporan', function () {
-    return view('form-laporan');
+Route::get('/login', function () {
+    return view('login');
 });

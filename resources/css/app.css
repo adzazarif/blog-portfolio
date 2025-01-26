@@ -2,10 +2,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@plugin "flowbite/plugin";
 
 *{
     font-family: "Fira Code", serif;
     font-style: normal;
+    scroll-behavior: smooth;
 }
 
 
@@ -130,4 +132,26 @@ width: 100px;
 .itemRightImage {
   right: max(calc(300px * 8), calc(100% + 200px));
   animation-name: scrollRight;
+}
+
+.loader-text span {
+  display: inline-block;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
