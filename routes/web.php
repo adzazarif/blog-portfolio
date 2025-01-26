@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,10 +18,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [LandingPageController::class, 'index'])->name('landing.index');
-route::prefix('admin')->group(function () {
+route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::resource('project',ProjectController::class);
 });
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('login',[LoginController::class, 'index'])->name('login');
+Route::post('authentication',[LoginController::class, 'authenticate'])->name('authentication');
+Route::post('logout',[LoginController::class, 'logout'])->name('logout');

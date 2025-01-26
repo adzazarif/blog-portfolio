@@ -172,7 +172,7 @@
                         <p class="text-white mb-3"><span class="text-yellow">var </span>database =
                             ["mysql","mongodb"];</p>
                         <p class="text-white mb-3"><span class="text-yellow">var </span>tool =
-                            ["git","github","figma","dbdiagram","visual studio code" ,"arduino"];</p>
+                            ["git","github","figma", "dbdiagram", "visual studio code" ,"arduino"];</p>
                     </div>
                     <div id="pengalaman">
                         <div
@@ -700,7 +700,7 @@
     </section>
 
     <footer class="p-4 bg-[#242532] text-center dark:bg-gray-900 text-white">
-        <small>@ 2023 Copyright: Developed by Adza Zarif Nur Iskandar</small>
+        <small>@ 2025 Copyright: Developed by Adza Zarif Nur Iskandar</small>
     </footer>
 
     <!-- Main modal -->
