@@ -463,7 +463,7 @@
                                 <div class="itemLeft item4">
                                     <div class="border border-yellow rounded-[20px] p-2">
                                         <p class="text-yellow text-center text-[15px]"><i
-                                                class="fa-solid fa-screwdriver-wrench"></i> CSS</p>
+                                                class="fa-solid fa-screwdriver-wrench"></i> Tailwind</p>
                                     </div>
                                 </div>
                                 <div class="itemLeft item5">
@@ -475,13 +475,13 @@
                                 <div class="itemLeft item6">
                                     <div class="border border-yellow rounded-[20px] p-2">
                                         <p class="text-yellow text-center text-[15px]"><i
-                                                class="fa-solid fa-screwdriver-wrench"></i> PHP</p>
+                                                class="fa-solid fa-screwdriver-wrench"></i> Laravel</p>
                                     </div>
                                 </div>
                                 <div class="itemLeft item7">
                                     <div class="border border-yellow rounded-[20px] p-2">
                                         <p class="text-yellow text-center text-[15px]"><i
-                                                class="fa-solid fa-screwdriver-wrench"></i> PHP</p>
+                                                class="fa-solid fa-screwdriver-wrench"></i> IoT</p>
                                     </div>
                                 </div>
                                 <div class="itemLeft item8">
