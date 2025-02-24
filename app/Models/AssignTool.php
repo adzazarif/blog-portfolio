@@ -9,4 +9,8 @@ class AssignTool extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+
+    public function tool(){
+        return $this->belongsTo(Tool::class);
+    }
 }

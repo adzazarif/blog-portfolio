@@ -15,4 +15,9 @@ class Project extends Model
         'description',
         'image',
     ];
+
+    public function assignTool()
+    {
+        return $this->hasMany(AssignTool::class);
+    }
 }
