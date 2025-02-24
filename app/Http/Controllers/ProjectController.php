@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AssignTool;
 use App\Models\Project;
+use App\Models\Tool;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -21,7 +23,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view("admin.layouts.form-project");
+        $tools = Tool::all();
+        return view("admin.layouts.form-project",compact('tools'));
     }
 
     /**
@@ -36,12 +39,19 @@ class ProjectController extends Controller
             $data[] = $name;
         }
 
-        Project::create([
+        $project = Project::create([
             'title' => $request->title,
             'slug' => $request->slug,
             'description' => $request->description,
             'image' => implode(',', $data),
         ]);
+
+        foreach($request->tool_id as $t){
+            AssignTool::create([
+                'project_id' => $project->id,
+                'tool_id' => $t
+            ]);
+        }
 
         return redirect()->route('project.index');
     }

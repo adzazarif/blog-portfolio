@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ToolController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +19,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [LandingPageController::class, 'index'])->name('landing.index');
+Route::get('/detail-project/{id}', [LandingPageController::class, 'detailProject'])->name('landing.detailProject');
 route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::resource('project',ProjectController::class);
+    Route::resource('tool', ToolController::class);
 });
 Route::get('login',[LoginController::class, 'index'])->name('login');
 Route::post('authentication',[LoginController::class, 'authenticate'])->name('authentication');

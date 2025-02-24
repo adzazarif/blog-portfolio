@@ -10,6 +10,12 @@ class LandingPageController extends Controller
     public function index()
     {
         $projects = Project::all();
-        return view("home", compact('projects'));
+        return view("layouts.home", compact('projects'));
+    }
+
+    public function detailProject($id)
+    {
+        $project = Project::find($id);
+        return view("layouts.detail-project", compact('project'));
     }
 }

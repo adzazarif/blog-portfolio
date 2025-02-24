@@ -1,101 +1,28 @@
-<!doctype html>
-<html>
+@extends('app')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta title="Portfolio Adza Zarif">
-    <title>Adza Zarif</title>
-    @vite('resources/css/app.css')
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-</head>
-
-<body class="overflow-x-hidden">
-
-    <div class="w-full h-[100vh] bg-dark z-50 fixed inset-0 flex justify-center items-center" id="loader">
-        <img src="{{ asset('image/bg-tp.png') }}" class="absolute animate-bounce top-[-100px] right-0" alt="">
-        <img src="{{ asset('image/bg-tp.png') }}" class="absolute animate-bounce bottom-0 left-[-170px]" alt="">
-        <div class="loader-text m-0 md:m-8">
-
-        </div>
-    </div>
-
-
-    <nav class=" backdrop-blur-md dark:bg-dark fixed w-full z-40 top-0 start-0 dark:border-gray-600">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <p class="text text-white">Adza Zarif</p>
-            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <button type="button" data-modal-target="crud-modal" data-modal-toggle="crud-modal"
-                    class="text-white bg-dark hover:bg-yellow duration-100 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Resume</button>
-                <button data-collapse-toggle="navbar-sticky" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                    aria-controls="navbar-sticky" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M1 1h15M1 7h15M1 13h15" />
-                    </svg>
-                </button>
-            </div>
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                <ul
-                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
-                    <li>
-                        <a href="#home"
-                            class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-white md:p-0 md:dark:text-blue-500"
-                            aria-current="page">Home</a>
-                    </li>
-                    <li>
-                        <a href="#about"
-                            class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
-                    </li>
-                    <li>
-                        <a href="#achievements"
-                            class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Achievements</a>
-                    </li>
-                    <li>
-                        <a href="#project"
-                            class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Project</a>
-                    </li>
-                    <li>
-                        <a href="#blog"
-                            class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blog</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
-    <section id="home">
+@section('content')
+   <section id="home">
         <div
             class="flex items-center relative gap-5 w-100 py-52 px-5 md:px-24 justify-between bg-dark flex-col md:flex-row ">
             <img src="{{ asset('image/bg-tp.png') }}" class="absolute top-[-100px] right-0" alt="">
             <img src="{{ asset('image/bg-tp.png') }}" class="absolute bottom-0 left-[-170px]" alt="">
-            <div data-aos="fade-up-right" data-aos-once="true" class="z-30">
+            <div data-aos="fade-up-right" data-aos-delay="2000" data-aos-once="true" class="z-30">
                 <h1 class="text-[45px] text-white font-bold md:w-[500px]">Adza Zarif Nur Iskandar.</h1>
                 <div class="w-12 my-10 h-[5px] bg-yellow"></div>
                 <div class="flex gap-5">
-                    <i class="text-[35px] text-white fa-brands fa-instagram hover:text-yellow hover:animate-bounce"></i>
-                    <i class="text-[35px] text-white fa-brands fa-linkedin hover:text-yellow hover:animate-bounce"></i>
-                    <i class="text-[35px] text-white fa-brands fa-github hover:text-yellow hover:animate-bounce"></i>
+                    <a target="_blank" href="https://www.instagram.com/adzazarifnur/"><i class="text-[35px] text-white fa-brands fa-instagram hover:text-yellow hover:animate-bounce"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/adzazarif/"><i class="text-[35px] text-white fa-brands fa-linkedin hover:text-yellow hover:animate-bounce"></i></a>
+                    <a target="_blank" href="https://github.com/Adzazarif"><i class="text-[35px] text-white fa-brands fa-github hover:text-yellow hover:animate-bounce"></i></a>
+                    
                 </div>
             </div>
-            <div class="text-white z-30" data-aos="fade-up-left" data-aos-once="true">
+            <div class="text-white z-30" data-aos="fade-up-left" data-aos-delay="2000" data-aos-once="true">
                 <p class="text-[22px]">- Introduction</p>
                 <p class="text-[28px] font-bold md:w-[500px] mt-5">Software Developer, IoT Enginer, AI Enginer.</p>
                 <p class="text-[17px] md:w-[500px] mt-3">Mampu membuat aplikasi untuk kebutuhan dan fungsionalitas
                     pengguna
                     untuk meningkatkan produktifitas.</p>
-                <a class="text-[17px] mt-3 inline-block text-yellow" href="">Lebih lengkap -></a>
+                <a class="text-[17px] mt-3 inline-block text-yellow" href="#about">Lebih lengkap -></a>
             </div>
         </div>
     </section>
@@ -103,16 +30,16 @@
     <section id="about">
         <div class="bg-[#242532] py-12">
             <div class="flex bg-[#242532] items-center justify-center">
-                <span data-aos="zoom-in" data-aos-once="true" class="w-64 h-[2px] bg-white"></span>
-                <div data-aos="zoom-in" data-aos-once="true" class="bg-[#242532] text-center p-5">
+                <span data-aos="zoom-in" data-aos-delay="2000" data-aos-once="true" class="w-64 h-[2px] bg-white"></span>
+                <div data-aos="zoom-in" data-aos-delay="2000" data-aos-once="true" class="bg-[#242532] text-center p-5">
                     <h1 class="text-[45px] font-bold text-white">About Me</h1>
                     <p class="text-white mx-auto text-[17px] md:w-[700px]">Berikut adalah tentang diri saya mulai dari
                         profil, skill, pengalaman yang saya miliki</p>
                 </div>
-                <span data-aos="zoom-in" data-aos-once="true" class="w-64 h-[2px] bg-white"></span>
+                <span data-aos="zoom-in" data-aos-delay="2000" data-aos-once="true" class="w-64 h-[2px] bg-white"></span>
             </div>
             <div class="flex gap-7 md:mx-24 p-7 flex-col md:flex-row rounded-[20px] shadow-lg shadow-gray-800 bg-[#090C11]"
-                data-aos="zoom-in" data-aos-once="true">
+                data-aos="zoom-in" data-aos-delay="2000" data-aos-once="true">
                 <div class="md:w-1/3 pr-7 border-r-2">
                     <div class="flex items-center ">
                         <i class="fa-solid text-[32px] text-yellow fa-folder-open"></i>
@@ -270,12 +197,19 @@
                     </h1>
                     <p class="text-white mx-auto text-[17px] md:w-[700px]">Penghargaan yang saya miliki ketika
                         mengikuti
-                        lomba lomba Nasional. dan beberapa penghargaan ketika mengikuti lomba dikampus</p>
+                        lomba lomba Nasional. dan beberapa Sertifikat yang saya miliki</p>
                 </div>
                 <span data-aos="zoom-in" data-aos-once="true" data-aos-offset="-500"
                     class="w-64 h-[2px] bg-white"></span>
             </div>
-            <div class="flex flex-col px-5 gap-5 items-center justify-center">
+
+            <div class="text-center mb-7">
+                <button type="button" class="text-white border border-white px-7 py-3 rounded-[20px] " id="btnPerlombaan">Perlombaan</button>
+                <button type="button" class="text-white border border-white px-7 py-3 rounded-[20px]" id="btnSertifikat">Sertifikat</button>
+            </div>
+            
+
+            <div class="flex flex-col px-5 gap-5 items-center justify-center" id="contentPerlombaan">
                 <!-- Card Content -->
                 <div data-aos="zoom-in" data-aos-once="true" data-aos-offset="-500"
                     class="relative pb-8 px-8 pt-28 md:w-[900px] w-full bg-[#242532] rounded-[20px]">
@@ -386,6 +320,43 @@
                     </div>
                 </div>
             </div>
+
+            <div id="contentSertifikat">
+
+            <div class="flex flex-col md:flex-row px-5 gap-8 items-center justify-center" >
+                <!-- Card Content -->
+                   <div class="w-full md:w-[500px] mt-5 border border-slate-500 hover:border-white  p-5 bg-[#242532] rounded-[10px]  "
+                    data-aos="zoom-in" data-aos-once="true" data-aos-offset="-700">
+                    <h1 class="text-white text-[25px] mb-3 text-center font-semibold">Sertifikat BNSP Junior Web Developer</h1>
+                    <img src="{{ asset('image/sertifikat/junior-web.jpeg') }}" alt="">
+                    </div>
+                    <div class="w-full md:w-[500px] mt-5 border border-slate-500 hover:border-white  p-5 bg-[#242532] rounded-[10px]  "
+                    data-aos="zoom-in" data-aos-once="true" data-aos-offset="-700">
+                    <h1 class="text-white text-[25px] mb-3 text-center font-semibold">Sertifikat BNSP Junior Cyber Security</h1>
+                    <img src="{{ asset('image/sertifikat/junior-cyber.jpeg') }}" alt="">
+                    </div>
+            </div>
+
+            <h1 class="text-white text-[25px] mt-7 text-center font-semibold">Sertifikat Dicoding</h1>
+            <div class="flex flex-col md:flex-row px-5 gap-8 items-center justify-center">
+                <div class="w-full md:w-[500px] mt-5 border border-slate-500 hover:border-white  p-5 bg-[#242532] rounded-[10px]  "
+                data-aos="zoom-in" data-aos-once="true" data-aos-offset="-700">
+                <img src="{{ asset('image/sertifikat/dicoding1.jpg') }}" alt="">
+                </div>
+
+                <div class="w-full md:w-[500px] mt-5 border border-slate-500 hover:border-white  p-5 bg-[#242532] rounded-[10px]  "
+                data-aos="zoom-in" data-aos-once="true" data-aos-offset="-700">
+                <img src="{{ asset('image/sertifikat/dicoding2.jpg') }}" alt="">
+                </div>
+
+                <div class="w-full md:w-[500px] mt-5 border border-slate-500 hover:border-white  p-5 bg-[#242532] rounded-[10px]  "
+                data-aos="zoom-in" data-aos-once="true" data-aos-offset="-700">
+                <img src="{{ asset('image/sertifikat/dicoding3.jpg') }}" alt="">
+                </div>
+            </div>
+
+        </div>
+
         </div>
         </div>
     </section>
@@ -393,14 +364,14 @@
 
     <section id="project" class="bg-dark py-10">
         <div class="flex bg-dark items-center justify-center">
-            <span data-aos="zoom-in" data-aos-once="true" data-aos-offset="-400"
+            <span data-aos="zoom-in" data-aos-once="true" data-aos-offset="-1200"
                 class="w-64 h-[2px] bg-white"></span>
-            <div data-aos="zoom-in" data-aos-once="true" data-aos-offset="-400" class="bg-dark text-center p-5">
+            <div data-aos="zoom-in" data-aos-once="true" data-aos-offset="-1200" class="bg-dark text-center p-5">
                 <h1 class="text-[45px] font-bold text-white">My Project</h1>
                 <p class="text-white mx-auto text-[17px] md:w-[700px]">Berikut project - project yang pernah saya buat
                     dengan berbagai platform seperti Web, IoT, Artifical Intelligence dan Desktop</p>
             </div>
-            <span data-aos="zoom-in" data-aos-once="true" data-aos-offset="-400"
+            <span data-aos="zoom-in" data-aos-once="true" data-aos-offset="-1200"
                 class="w-64 h-[2px] bg-white"></span>
         </div>
 
@@ -410,8 +381,8 @@
                 @php
                     $images = explode(',', $project->image);
                 @endphp
-                <div class="w-full md:w-[600px] flex flex-col md:flex-row gap-5 duration-300 relative mt-5 hover:border-white p-5 bg-[#242532] rounded-[10px] border border-slate-500"
-                    data-aos="zoom-in" data-aos-once="true" data-aos-offset="-700">
+                <div class="w-full md:w-[600px] flex flex-col md:flex-row gap-5 relative mt-5 border border-slate-500 hover:border-white duration-600 p-5 bg-[#242532] rounded-[10px]  "
+                    data-aos="zoom-in" data-aos-once="true" data-aos-offset="-1500">
                     <div class="swiper w-full md:w-2/3 mySwiper">
                         <div class="swiper-wrapper">
                             @for ($i = 0; $i < count($images); $i++)
@@ -437,15 +408,14 @@
                             <div>
                                 <h1 class="text-white text-[22px] font-semibold">{{ $project->title }}</h1>
                                 <p class="text-slate-400 text-[15px]">{{ $project->slug }}</p>
-                                <a href="#"
+                                <a href="{{ route('landing.detailProject', $project->id) }}"
                                     class="text-white mt-2 inline-block hover:text-yellow duration-300 text-[17px]">Detail
                                     -></a>
                             </div>
                             <div class="wrapper mt-5">
                                 <div class="itemLeft w-[100px] item1">
                                     <div class="border border-yellow rounded-[20px] p-2">
-                                        <p class="text-yellow text-center text-[15px]"><i
-                                                class="fa-solid fa-screwdriver-wrench"></i> PHP</p>
+                                        <p class="text-yellow text-center text-[15px]"><i class="fa-brands fa-php"></i> PHP</p>
                                     </div>
                                 </div>
                                 <div class="itemLeft w-[100px] item2">
@@ -468,28 +438,10 @@
                                 </div>
                                 <div class="itemLeft item5">
                                     <div class="border border-yellow rounded-[20px] p-2">
-                                        <p class="text-yellow text-center text-[15px]"><i
-                                                class="fa-solid fa-screwdriver-wrench"></i> HTML</p>
+                                        <p class="text-yellow text-center text-[15px]"><i class="fa-brands fa-html5"></i> HTML</p>
                                     </div>
                                 </div>
-                                <div class="itemLeft item6">
-                                    <div class="border border-yellow rounded-[20px] p-2">
-                                        <p class="text-yellow text-center text-[15px]"><i
-                                                class="fa-solid fa-screwdriver-wrench"></i> Laravel</p>
-                                    </div>
-                                </div>
-                                <div class="itemLeft item7">
-                                    <div class="border border-yellow rounded-[20px] p-2">
-                                        <p class="text-yellow text-center text-[15px]"><i
-                                                class="fa-solid fa-screwdriver-wrench"></i> IoT</p>
-                                    </div>
-                                </div>
-                                <div class="itemLeft item8">
-                                    <div class="border border-yellow rounded-[20px] p-2">
-                                        <p class="text-yellow text-center text-[15px]"><i
-                                                class="fa-solid fa-screwdriver-wrench"></i> PHP</p>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -502,22 +454,22 @@
     <section id="blog" class="bg-dark">
         <img class="w-full" src="{{ asset('image/polygon3.png') }}" alt="">
         <div class="flex bg-[#242532] items-center justify-center">
-            <span data-aos="zoom-in" data-aos-once="true" data-aos-offset="-500"
+            <span data-aos="zoom-in" data-aos-once="true" data-aos-offset="-1300"
                 class="w-64 h-[2px] bg-white"></span>
-            <div data-aos="zoom-in" data-aos-once="true" data-aos-offset="-500"
+            <div data-aos="zoom-in" data-aos-once="true" data-aos-offset="-1300"
                 class="bg-[#242532] text-center p-5">
                 <h1 class="text-[45px] font-bold text-white">Blogs</h1>
                 <p class="text-white mx-auto text-[17px] md:w-[700px]">Terdapat catatan , pengalaman, pengembangan yang
                     saya tulis untuk menambah pengetahuan</p>
             </div>
-            <span data-aos="zoom-in" data-aos-once="true" data-aos-offset="-500"
+            <span data-aos="zoom-in" data-aos-once="true" data-aos-offset="-1300"
                 class="w-64 h-[2px] bg-white"></span>
         </div>
 
         <div class="flex flex-col md:flex-row gap-5 px-5 md:px-28 pt-10 pb-28 bg-[#242532]">
             <div class="md:w-2/3">
                 <p class="text-white text-[25px] mb-3"><i class="mr-3 fa-solid fa-rocket"></i>Paling Populer</p>
-                <div data-aos="zoom-in-up" data-aos-once="true" data-aos-offset="-500"
+                <div data-aos="zoom-in-up" data-aos-once="true" data-aos-offset="-1300"
                     class="p-5 w-full inline-block bg-dark rounded-[20px]">
                     <p class="text-yellow text-[15px] p-3 border rounded-[20px] inline-block border-yellow mb-3"><i class="fa-solid fa-pen-to-square"></i> Experience</p>
                     <img class="w-full rounded-[20px]" src="{{ asset('image/blog/lomba-malang.jpg') }}"
@@ -556,7 +508,7 @@
                 </div>
             </div>
             <div class="md:w-1/3">
-                <div data-aos="zoom-in-up" data-aos-once="true" data-aos-offset="-500"
+                <div data-aos="zoom-in-up" data-aos-once="true" data-aos-offset="-1300"
                     class="p-3 mb-3 bg-dark rounded-[20px]">
                     <p class="text-yellow text-[15px] p-3 border rounded-[20px] inline-block border-yellow mb-3"><i class="fa-solid fa-pen-to-square"></i> Experience</p>
                     <img class="w-full rounded-[20px]" src="{{ asset('image/blog/lomba-um.jpg') }}" alt="">
@@ -572,7 +524,7 @@
                         <p class="text-slate-300 text-[14px]">Bagikan<i class="ml-2 fa-solid fa-share"></i></p>
                     </div>
                 </div>
-                <div data-aos="zoom-in-up" data-aos-once="true" data-aos-offset="-500"
+                <div data-aos="zoom-in-up" data-aos-once="true" data-aos-offset="-1300"
                     class="p-3 mb-3 bg-dark rounded-[20px]">
                     <p class="text-yellow text-[15px] p-3 border rounded-[20px] inline-block border-yellow mb-3"><i class="fa-solid fa-pen-to-square"></i> Tech</p>
                     <img class="w-full rounded-[20px]" src="{{ asset('image/blog/inertia.png') }}" alt="">
@@ -665,43 +617,7 @@
         </div>
     </section>
 
-    <section>
-        <div class="bg-[#242532] py-32">
-            <div class="flex bg-[#242532] items-center justify-center">
-                <span class="w-64 h-[2px] bg-white"></span>
-                <div class="bg-[#242532] text-center p-5">
-                    <h1 class="text-[45px] font-bold text-white">Contact Saya</h1>
-
-                </div>
-                <span class="w-64 h-[2px] bg-white"></span>
-            </div>
-            <div class="px-5 md:px-36 text-center">
-                <p class="text-yellow text-[20px]">Adza Zarif Nur Iskandar</p>
-                <div class="flex justify-center gap-5 mb-5 text-white">
-                    <p class="text-[18px]">-> Software Developer</p>
-                    <p class="text-[18px]">-> IoT Enginer</p>
-                    <p class="text-[18px]">-> AI Enginer</p>
-                </div>
-                <p class="text-white">Jangan ragu untuk menghubungi saya jika ada pertanyaan, saran, atau kritik. Jika
-                    anda ingin membuat sebuah proyek, jangan ragu untuk menghubungi saya. saya siap membantu anda.</p>
-                <div class="flex justify-center mt-5 gap-5">
-                    <a href="https://github.com/AdzaZarif" target="_blank"
-                        class="text-yellow border border-yellow p-3 rounded-[20px]"><i
-                            class="fa-brands fa-github"></i> adza zarif</a>
-                    <a href="https://www.instagram.com/adza_zarif/" target="_blank"
-                        class="text-yellow border border-yellow p-3 rounded-[20px]"><i
-                            class="fa-brands fa-instagram"></i> adzazarifnur</a>
-                    <a href="https://www.linkedin.com/in/adza-zarif/" target="_blank"
-                        class="text-yellow border border-yellow p-3 rounded-[20px]"><i
-                            class="fa-brands fa-linkedin"></i> Adza Zarif Nur Iskandar</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="p-4 bg-[#242532] text-center dark:bg-gray-900 text-white">
-        <small>@ 2025 Copyright: Developed by Adza Zarif Nur Iskandar</small>
-    </footer>
+    @include('components.footer')
 
     <!-- Main modal -->
     <div id="crud-modal" tabindex="-1" aria-hidden="true"
@@ -728,114 +644,111 @@
                 </div>
                 <!-- Modal body -->
                 <div class="p-4 md:p-5">
-                    <embed src="{{ asset('image/resume.pdf') }}" class="w-full h-[80vh]" />
+                    <embed src="{{ asset('image/resume.pdf') }}" type="application/pdf" class="w-full h-[80vh]" />
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
-        AOS.init();
-        $(document).ready(function() {
+@push('scripts')
+<script>
+    AOS.init();
+    $(document).ready(function() {
+        $('#skill').hide();
+        $('#aboutme').hide();
+        $('#contentSertifikat').hide();
+        $('#contentPerlombaan').show();
+        $('#btnPengalaman').addClass('active-about');
+        $('#btnPerlombaan').addClass('active-achivement');
+        $('#lblFile').html('index.js');
+
+        $('#btnPengalaman').click(function() {
             $('#skill').hide();
             $('#aboutme').hide();
+            $('#pengalaman').show();
+            $('#btnAboutme').removeClass('active-about');
+            $('#btnSkill').removeClass('active-about');
             $('#btnPengalaman').addClass('active-about');
+            $('#lblFile').html('pengalaman.jpg');
+        });
+
+        $('#btnSkill').click(function() {
+            $('#skill').show();
+            $('#aboutme').hide();
+            $('#pengalaman').hide();
+            $('#btnAboutme').removeClass('active-about');
+            $('#btnSkill').addClass('active-about');
+            $('#btnPengalaman').removeClass('active-about');
+            $('#lblFile').html('skill.js');
+        });
+
+        $('#btnAboutme').click(function() {
+            $('#skill').hide();
+            $('#aboutme').show();
+            $('#pengalaman').hide();
+            $('#btnAboutme').addClass('active-about');
+            $('#btnSkill').removeClass('active-about');
+            $('#btnPengalaman').removeClass('active-about');
             $('#lblFile').html('index.js');
-
-            $('#btnPengalaman').click(function() {
-                $('#skill').hide();
-                $('#aboutme').hide();
-                $('#pengalaman').show();
-                $('#btnAboutme').removeClass('active-about');
-                $('#btnSkill').removeClass('active-about');
-                $('#btnPengalaman').addClass('active-about');
-                $('#lblFile').html('pengalaman.jpg');
-            });
-
-            $('#btnSkill').click(function() {
-                $('#skill').show();
-                $('#aboutme').hide();
-                $('#pengalaman').hide();
-                $('#btnAboutme').removeClass('active-about');
-                $('#btnSkill').addClass('active-about');
-                $('#btnPengalaman').removeClass('active-about');
-                $('#lblFile').html('skill.js');
-            });
-
-            $('#btnAboutme').click(function() {
-                $('#skill').hide();
-                $('#aboutme').show();
-                $('#pengalaman').hide();
-                $('#btnAboutme').addClass('active-about');
-                $('#btnSkill').removeClass('active-about');
-                $('#btnPengalaman').removeClass('active-about');
-                $('#lblFile').html('index.js');
-            });
-        })
-    </script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
         });
-    </script>
-    <script>
-        var swiper = new Swiper(".mySwiperTech", {
-            slidesPerView: 2,
-            spaceBetween: 10,
-            loop: true,
-            //   centeredSlides: true,
-            autoplay: {
-                delay: 2000,
-                disableOnInteraction: false,
 
-            },
-            freemode: {
-                enabled: true,
-            },
-            //   pagination: {
-            //     el: ".swiper-pagination",
-            //     clickable: true,
-            //   },
+        $('#btnPerlombaan').click(function() {
+            $('#contentPerlombaan').show();
+            $('#contentSertifikat').hide();
+            $('#btnPerlombaan').addClass('active-achivement');
+            $('#btnSertifikat').removeClass('active-achivement');
         });
-    </script>
-    <script>
-        const loaderTextWraper = document.querySelector('.loader-text');
-        const loaderText = ['A', 'D', 'Z', 'A', '-', 'Z', 'A', 'R', 'I', 'F'];
-        let delay = 0;
-        if (loaderTextWraper) {
-            for (let i = 0; i < loaderText.length; i++) {
-                delay += 150;
-                const span = document.createElement('span');
-                span.textContent = loaderText[i];
-                span.style.animationDelay = delay + 'ms';
-                loaderTextWraper.append(span);
-            }
-            setTimeout(() => {
-                const loader = document.querySelector('#loader');
-                loader.remove();
-            }, 2000);
-        }
-    </script>
 
-    @vite('resources/js/app.js')
-</body>
+        $('#btnSertifikat').click(function() {
+            $('#contentPerlombaan').hide();
+            $('#contentSertifikat').show();
+            $('#btnPerlombaan').removeClass('active-achivement');
+            $('#btnSertifikat').addClass('active-achivement');
+        });
+    })
+</script>
 
-</html>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+<script>
+    var swiper = new Swiper(".mySwiperTech", {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        loop: true,
+        //   centeredSlides: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+
+        },
+        freemode: {
+            enabled: true,
+        },
+        //   pagination: {
+        //     el: ".swiper-pagination",
+        //     clickable: true,
+        //   },
+    });
+</script>
+  
+@endpush
+@endsection

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     @vite('resources/css/app.css')
+    <script src="https://cdn.tiny.cloud/1/t7llslvykrvlxsby0nmlakrajlewggz2xp5zq8dpkgpsqupy/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
 </head>
@@ -77,7 +78,14 @@
            @yield('content')
          </div>
       </div>
-      
+
+<script>
+  tinymce.init({
+    selector: 'textarea',
+    plugins: 'code lists table', // Tambahkan plugin yang diinginkan
+    toolbar: 'undo redo | bold italic | numlist bullist | table | code' // Tambahkan ke toolbar
+  });
+</script>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 </body>
 </html>

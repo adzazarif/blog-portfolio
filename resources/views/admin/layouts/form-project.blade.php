@@ -20,6 +20,81 @@
 
                 </div>
 
+                <div class="grid gap-6 mb-6 md:grid-cols-2">
+                    <div>
+                        <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
+                        
+                        <select id="category" name="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                          <option selected>Choose a category</option>
+                          <option value="Website">Website</option>
+                          <option value="Iot">Iot</option>
+                          <option value="Artificial Intelligence">Artificial Intelligence</option>
+                          <option value="Mobile">Mobile</option>
+                          <option value="Other">Other</option>
+                        </select> 
+                    </div>
+                
+                </div>
+
+                <div class="grid gap-6 mb-6 md:grid-cols-5">
+                    <div>
+                        <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tool</label>
+                        
+                        <select id="category" name="tool_id[]" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                          <option selected>Choose a tool</option>
+                          @foreach ($tools as $tool)
+                          <option value="{{ $tool->id }}">{{ $tool->name }}</option>
+                          @endforeach
+                        </select> 
+                    </div>
+
+                    <div>
+                        <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tool</label>
+                        
+                        <select id="category" name="tool_id[]" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                          <option selected>Choose a tool</option>
+                          @foreach ($tools as $tool)
+                          <option value="{{ $tool->id }}">{{ $tool->name }}</option>
+                          @endforeach
+                        </select> 
+                    </div>
+
+                    <div>
+                        <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tool</label>
+                        
+                        <select id="category" name="tool_id[]" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                          <option selected>Choose a tool</option>
+                          @foreach ($tools as $tool)
+                          <option value="{{ $tool->id }}">{{ $tool->name }}</option>
+                          @endforeach
+                        </select> 
+                    </div>
+
+                    <div>
+                        <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tool</label>
+                        
+                        <select id="category" name="tool_id[]" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                          <option selected>Choose a tool</option>
+                          @foreach ($tools as $tool)
+                          <option value="{{ $tool->id }}">{{ $tool->name }}</option>
+                          @endforeach
+                        </select> 
+                    </div>
+                    
+                    <div>
+                        <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tool</label>
+                        
+                        <select id="category" name="tool_id[]" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                          <option selected>Choose a tool</option>
+                          @foreach ($tools as $tool)
+                          <option value="{{ $tool->id }}">{{ $tool->name }}</option>
+                          @endforeach
+                        </select> 
+                    </div>    
+                
+                </div>
+                
+
                 <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
                 <textarea id="message" name="description" rows="4"
                     class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -103,3 +178,5 @@
         </div>
     </div>
 @endsection
+
+

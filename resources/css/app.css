@@ -15,6 +15,12 @@
     background-color: #1D1F23;
 }
 
+.active-achivement{
+    background-color: #F2B149;
+    color: #000;
+    border: none;
+}
+
 *,
 *::before,
 *::after {
@@ -51,7 +57,7 @@
 }
 
 .itemLeft {
-width: 100px;
+  width: 130px;
   display: inline-block;
   border-radius: 6px;
   position: absolute;
@@ -61,42 +67,31 @@ width: 100px;
 }
 
 .itemLeft {
-  left: max(calc(100px * 8), 100%);
+  left: max(calc(130px * 5), 100%);
   animation-name: scrollLeft;
 }
 
 
 .item1 {
-  animation-delay: calc(30s / 8 * (8 - 1) * -1);
+  animation-delay: calc(30s / 5 * (5 - 1) * -1);
 }
 
 .item2 {
-  animation-delay: calc(30s / 8 * (8 - 2) * -1);
+  animation-delay: calc(30s / 5 * (5 - 2) * -1);
 }
 
 .item3 {
-  animation-delay: calc(30s / 8 * (8 - 3) * -1);
+  animation-delay: calc(30s / 5 * (5 - 3) * -1);
 }
 
 .item4 {
-  animation-delay: calc(30s / 8 * (8 - 4) * -1);
+  animation-delay: calc(30s / 5 * (5 - 4) * -1);
 }
 
 .item5 {
-  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+  animation-delay: calc(30s / 5 * (5 - 5) * -1);
 }
 
-.item6 {
-  animation-delay: calc(30s / 8 * (8 - 6) * -1);
-}
-
-.item7 {
-  animation-delay: calc(30s / 8 * (8 - 7) * -1);
-}
-
-.item8 {
-  animation-delay: calc(30s / 8 * (8 - 8) * -1);
-}
 
 .wrapperImage {
   width: 90%;
