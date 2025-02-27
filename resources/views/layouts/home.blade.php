@@ -1,6 +1,6 @@
 @extends('app')
-
 @section('content')
+
    <section id="home">
         <div
             class="flex items-center relative gap-5 w-100 py-52 px-5 md:px-24 justify-between bg-dark flex-col md:flex-row ">
@@ -381,6 +381,7 @@
                 @php
                     $images = explode(',', $project->image);
                 @endphp
+
                 <div class="w-full md:w-[600px] flex flex-col md:flex-row gap-5 relative mt-5 border border-slate-500 hover:border-white duration-600 p-5 bg-[#242532] rounded-[10px]  "
                     data-aos="zoom-in" data-aos-once="true" data-aos-offset="-1500">
                     <div class="swiper w-full md:w-2/3 mySwiper">
@@ -413,30 +414,30 @@
                                     -></a>
                             </div>
                             <div class="wrapper mt-5">
-                                <div class="itemLeft w-[100px] item1">
+
+                                @foreach ($project->assignTool as $key => $t)
+                                {{-- @dd($t) --}}
+                                <div class="itemLeft w-[100px] item{{ $key+1 }}">
                                     <div class="border border-yellow rounded-[20px] p-2">
-                                        <p class="text-yellow text-center text-[15px]"><i class="fa-brands fa-php"></i> PHP</p>
+                                        <p class="text-yellow text-center text-[15px]"><i class="fa-brands fa-php"></i> {{ $t->tool->name }}</p>
                                     </div>
                                 </div>
-                                <div class="itemLeft w-[100px] item2">
+                            @endforeach
+                                
+                                <div class="itemLeft w-[100px] item6">
                                     <div class="border border-yellow rounded-[20px] p-2">
                                         <p class="text-yellow text-center text-[15px]"><i
                                                 class="fa-solid fa-screwdriver-wrench"></i> JQuery</p>
                                     </div>
                                 </div>
-                                <div class="itemLeft w-[100px] item3">
+                                <div class="itemLeft w-[100px] item7">
                                     <div class="border border-yellow rounded-[20px] p-2">
                                         <p class="text-yellow text-center text-[15px]"><i
                                                 class="fa-solid fa-screwdriver-wrench"></i> MySQL</p>
                                     </div>
                                 </div>
-                                <div class="itemLeft item4">
-                                    <div class="border border-yellow rounded-[20px] p-2">
-                                        <p class="text-yellow text-center text-[15px]"><i
-                                                class="fa-solid fa-screwdriver-wrench"></i> Tailwind</p>
-                                    </div>
-                                </div>
-                                <div class="itemLeft item5">
+
+                                <div class="itemLeft w-[100px] item8">
                                     <div class="border border-yellow rounded-[20px] p-2">
                                         <p class="text-yellow text-center text-[15px]"><i class="fa-brands fa-html5"></i> HTML</p>
                                     </div>

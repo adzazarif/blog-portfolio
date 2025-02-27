@@ -15,9 +15,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
-
 <body class="overflow-x-hidden">
-
     {{-- <div class="w-full h-[100vh] bg-dark z-50 fixed inset-0 flex justify-center items-center" id="loader">
         <img src="{{ asset('image/bg-tp.png') }}" class="absolute animate-bounce top-[-100px] right-0" alt="">
         <img src="{{ asset('image/bg-tp.png') }}" class="absolute animate-bounce bottom-0 left-[-170px]" alt="">
