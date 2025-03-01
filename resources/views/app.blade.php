@@ -24,10 +24,25 @@
         </div>
     </div> --}}
 
+    <div id="playButton" class="fixed bottom-7 left-7 z-40 bg-[#242532] flex items-center justify-center rounded-[20px]  shadow-md shadow-slate-600 border border-slate-600 w-[100px] h-[50px] cursor-pointer">
+        <p id="playText" class="text-white"><i class="fa-solid fa-play"></i> Play</p>
+    </div>
+    <div id="upButton" class="hidden fixed bottom-7 z-40 right-0 left-0 m-auto flex items-center justify-center rounded-full border shadow-md shadow-slate-600 border-slate-600 w-[50px] h-[50px] cursor-pointer bg-gray-800">
+        <p class="text-white"><i class="fa-solid fa-upload"></i></p>
+    </div>
+    <div id="playButton" class="fixed bottom-7 right-7 z-40 bg-[#242532] flex items-center justify-center rounded-full  shadow-md shadow-slate-600 border border-slate-600 w-[50px] h-[50px] cursor-pointer">
+        <p id="playText" class="text-white text-[25px]"><i class="fa-brands fa-whatsapp"></i></p>
+    </div>
+    <audio id="audio" autoplay loop>
+        <source src="{{ asset('bs.mp3') }}" type="audio/mpeg">
+      </audio>
+
+
+
     @include('components.navbar')
 
-    @yield('content')
 
+    @yield('content')
     {{-- <script>
         const loaderTextWraper = document.querySelector('.loader-text');
         const loaderText = ['A', 'D', 'Z', 'A', '-', 'Z', 'A', 'R', 'I', 'F'];
@@ -46,6 +61,38 @@
             }, 2000);
         }
     </script> --}}
+    <script>
+        let audio = document.getElementById('audio');
+        let playButton = document.getElementById('playButton');
+        let playText = document.getElementById('playText');
+    
+        playButton.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play().then(() => {
+                    playText.innerHTML = "<i class='fa-solid fa-circle-pause'></i> Pause"; // Ubah teks jadi "Pause"
+                }).catch(error => console.log('Autoplay gagal:', error));
+            } else {
+                audio.pause();
+                playText.innerHTML = "<i class='fa-solid fa-play'></i> Play"; // Ubah teks jadi "Play"
+            }
+        });
+
+        let upButton = document.getElementById("upButton");
+
+// Event saat scroll
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 200) {
+        upButton.classList.remove("hidden"); // Munculkan tombol jika scroll lebih dari 200px
+    } else {
+        upButton.classList.add("hidden"); // Sembunyikan jika kurang dari 200px
+    }
+});
+
+// Event klik untuk kembali ke atas dengan efek smooth scroll
+upButton.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+    </script>
      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

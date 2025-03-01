@@ -8,7 +8,9 @@ export default {
     ],
     theme: {
         extend: {
-          
+            animation: {
+                'bounce-slow': 'bounce 10s infinite',
+              },
             colors: {
                 dark: "#323444",
                 grey: "#15181D",

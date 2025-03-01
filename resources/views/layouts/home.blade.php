@@ -4,8 +4,8 @@
    <section id="home">
         <div
             class="flex items-center relative gap-5 w-100 py-52 px-5 md:px-24 justify-between bg-dark flex-col md:flex-row ">
-            <img src="{{ asset('image/bg-tp.png') }}" class="absolute top-[-100px] right-0" alt="">
-            <img src="{{ asset('image/bg-tp.png') }}" class="absolute bottom-0 left-[-170px]" alt="">
+            <img src="{{ asset('image/bg-tp.png') }}" class="absolute top-[-100px] animate-bounce-slow right-0" alt="">
+            <img src="{{ asset('image/bg-tp.png') }}" class="absolute animate-pulse bottom-0 left-[-170px]" alt="">
             <div data-aos="fade-up-right" data-aos-delay="2000" data-aos-once="true" class="z-30">
                 <h1 class="text-[45px] text-white font-bold md:w-[500px]">Adza Zarif Nur Iskandar.</h1>
                 <div class="w-12 my-10 h-[5px] bg-yellow"></div>
