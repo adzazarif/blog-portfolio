@@ -22,7 +22,7 @@
                 <p class="text-[17px] md:w-[500px] mt-3">Mampu membuat aplikasi untuk kebutuhan dan fungsionalitas
                     pengguna
                     untuk meningkatkan produktifitas.</p>
-                <a class="text-[17px] mt-3 inline-block text-yellow" href="#about">Lebih lengkap -></a>
+                <a class=" py-3 text-[17px] mt-3 inline-block hover:bg-yellow hover:text-dark hover:px-4 rounded duration-300  text-yellow" href="#about">Lebih lengkap -></a>
             </div>
         </div>
     </section>

@@ -27,7 +27,7 @@
     <div id="playButton" class="fixed bottom-7 left-7 z-40 bg-[#242532] flex items-center justify-center rounded-[20px]  shadow-md shadow-slate-600 border border-slate-600 w-[100px] h-[50px] cursor-pointer">
         <p id="playText" class="text-white"><i class="fa-solid fa-play"></i> Play</p>
     </div>
-    <div id="upButton" class="hidden fixed bottom-7 z-40 right-0 left-0 m-auto flex items-center justify-center rounded-full border shadow-md shadow-slate-600 border-slate-600 w-[50px] h-[50px] cursor-pointer bg-gray-800">
+    <div id="upButton" class="opacity-0 duration-300 fixed bottom-7 z-40 right-0 left-0 m-auto flex items-center justify-center rounded-full border shadow-md shadow-slate-600 border-slate-600 w-[50px] h-[50px] cursor-pointer bg-gray-800">
         <p class="text-white"><i class="fa-solid fa-upload"></i></p>
     </div>
     <div id="playButton" class="fixed bottom-7 right-7 z-40 bg-[#242532] flex items-center justify-center rounded-full  shadow-md shadow-slate-600 border border-slate-600 w-[50px] h-[50px] cursor-pointer">
@@ -82,9 +82,11 @@
 // Event saat scroll
 window.addEventListener("scroll", function () {
     if (window.scrollY > 200) {
-        upButton.classList.remove("hidden"); // Munculkan tombol jika scroll lebih dari 200px
+        upButton.classList.remove("opacity-0"); 
+        upButton.classList.add("opacity-100"); 
     } else {
-        upButton.classList.add("hidden"); // Sembunyikan jika kurang dari 200px
+        upButton.classList.remove("opacity-100"); 
+        upButton.classList.add("opacity-0"); 
     }
 });
 
