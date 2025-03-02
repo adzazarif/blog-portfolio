@@ -468,6 +468,9 @@
         </div>
 
         <div class="flex flex-col md:flex-row gap-5 px-5 md:px-28 pt-10 pb-28 bg-[#242532]">
+
+            @foreach ($blogs as $blog)     
+            
             <div class="md:w-2/3">
                 <p class="text-white text-[25px] mb-3"><i class="mr-3 fa-solid fa-rocket"></i>Paling Populer</p>
                 <div data-aos="zoom-in-up" data-aos-once="true" data-aos-offset="-1300"
@@ -475,22 +478,8 @@
                     <p class="text-yellow text-[15px] p-3 border rounded-[20px] inline-block border-yellow mb-3"><i class="fa-solid fa-pen-to-square"></i> Experience</p>
                     <img class="w-full rounded-[20px]" src="{{ asset('image/blog/lomba-malang.jpg') }}"
                         alt="">
-                    <p class="text-white text-[25px] mt-5">Play IT Polinema National Competition 2024</p>
-                    <p class="text-slate-300 mt-2 text-[15px]">Ini pengalaman saya ketika mengikuti lomba IT Polinema
-                        National Competition 2024. Kali kedua mengikuti lomba yang berskala nasional. Lomba kali ini
-                        saya
-                        dengan tim cozifar team yang beranggotakan nico ,farhan, dan saya sendiri. Lomba yang saya ikuti
-                        ini adalah kategori hackathon software development. Pertama tama saya membuat proposal terlebih
-                        dahulu yang isinya menjelaskan sistem dari apliasi kami. setelah itu menunggu pengumuman finalis
-                        dengan 10 besar tim yang lolos akan melakukan lomba hackaton di Politeknik Negeri Malang secara
-                        ofline pada tanggal 1-3 November. alhamdulillah tim saya lolos terpilih jadi finalis dengan
-                        pesaing dari universitas dan politeknik se indonesia. untuk hari pertama kita disuruh wawancara
-                        dari hasil proposal yang kita buat. untuk hari kedua disini juri sudah mengasih tantangan untuk
-                        dikerjakan selama 24 jam nonstop. Untuk tantangan nya sendiri adalah disuruh membuat Generative
-                        AI untuk di implementasikan di aplikasi yang kita buat. Hari ketiga adalah hari terakhir dari
-                        kegiatan lomba dimana di hari ketiga ini kami presentasi akhir dari aplikasi yang telah kita
-                        buat selama 24 jam. Kemudian siang nya penutupan dan pengumuman pemenang. Alhamdulillah tim kami
-                        membawa pulang juara 3 kategori software development </p>
+                    <p class="text-white text-[25px] mt-5">{{ $blogs[0]->title }}</p>
+                    <p class="text-slate-300 mt-2 text-[15px]">{!! $blogs[0]->description !!}</p>
 
                     <div class="flex mt-3 justify-between items-center">
                         <div class="flex gap-5">
@@ -545,6 +534,7 @@
                     class="text-yellow mt-5 inline-block w-full text-center text-[18px] p-3 rounded-[20px]">Lihat
                     seluruh Blog -></a>
             </div>
+            @endforeach
         </div>
 
         <img class="w-full" src="{{ asset('image/polygon5.png') }}" alt="">

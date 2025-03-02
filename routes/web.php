@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LoginController;
@@ -24,6 +25,7 @@ route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::resource('project',ProjectController::class);
     Route::resource('tool', ToolController::class);
+    Route::resource('blog', BlogController::class);
 });
 Route::get('login',[LoginController::class, 'index'])->name('login');
 Route::post('authentication',[LoginController::class, 'authenticate'])->name('authentication');
