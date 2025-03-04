@@ -209,7 +209,14 @@
             </div>
             
 
-            <div class="flex flex-col px-5 gap-5 items-center justify-center" id="contentPerlombaan">
+            <div class="flex flex-col px-5 gap-5 items-center justify-center relative" id="contentPerlombaan">
+
+                <p class="text-dark p-5 absolute text-[60px] rotate-12 left-36 z-30 top-[-80px] "><i class="fa-solid fa-trophy"></i></p>
+                <img src="{{ asset('image/bg-tp.png') }}" class="absolute top-[-220px] left-0" alt="">
+
+                <p class="text-dark p-5 absolute text-[60px] rotate-12 right-36 z-30 bottom-0 "><i class="fa-solid fa-award"></i></p>
+                <img src="{{ asset('image/bg-tp.png') }}" class="absolute bottom-[-180px] right-0" alt="">
+
                 <!-- Card Content -->
                 <div data-aos="zoom-in" data-aos-once="true" data-aos-offset="-500"
                     class="relative pb-8 px-8 pt-28 md:w-[900px] w-full bg-[#242532] rounded-[20px]">
