@@ -476,7 +476,7 @@
 
         <div class="flex flex-col md:flex-row gap-5 px-5 md:px-28 pt-10 pb-28 bg-[#242532]">
 
-            @foreach ($blogs as $blog)     
+
             
             <div class="md:w-2/3">
                 <p class="text-white text-[25px] mb-3"><i class="mr-3 fa-solid fa-rocket"></i>Paling Populer</p>
@@ -509,7 +509,7 @@
                     class="p-3 mb-3 bg-dark rounded-[20px]">
                     <p class="text-yellow text-[15px] p-3 border rounded-[20px] inline-block border-yellow mb-3"><i class="fa-solid fa-pen-to-square"></i> Experience</p>
                     <img class="w-full rounded-[20px]" src="{{ asset('image/blog/lomba-um.jpg') }}" alt="">
-                    <p class="text-white text-[20px] mt-5">UM SDGs Hackathon National Competition 2024</p>
+                    <p class="text-white text-[20px] mt-5">{{ $blogs[1]->title }}</p>
 
                     <div class="flex gap-5 mt-1 items-center">
                         <p class="text-slate-300 text-[13px]"><i class="fa-solid fa-calendar-days"></i> 2 juni 2024
@@ -525,7 +525,7 @@
                     class="p-3 mb-3 bg-dark rounded-[20px]">
                     <p class="text-yellow text-[15px] p-3 border rounded-[20px] inline-block border-yellow mb-3"><i class="fa-solid fa-pen-to-square"></i> Tech</p>
                     <img class="w-full rounded-[20px]" src="{{ asset('image/blog/inertia.png') }}" alt="">
-                    <p class="text-white text-[20px] mt-5">Solusi reactJS dengan laravel menggunakan inertia</p>
+                    <p class="text-white text-[20px] mt-5">{{ $blogs[2]->title }}</p>
 
                     <div class="flex gap-5 mt-1 items-center">
                         <p class="text-slate-300 text-[13px]"><i class="fa-solid fa-calendar-days"></i> 2 Oktober 2024
@@ -541,7 +541,7 @@
                     class="text-yellow mt-5 inline-block w-full text-center text-[18px] p-3 rounded-[20px]">Lihat
                     seluruh Blog -></a>
             </div>
-            @endforeach
+
         </div>
 
         <img class="w-full" src="{{ asset('image/polygon5.png') }}" alt="">
