@@ -483,7 +483,7 @@
                 <div data-aos="zoom-in-up" data-aos-once="true" data-aos-offset="-1300"
                     class="p-5 w-full inline-block bg-dark rounded-[20px]">
                     <p class="text-yellow text-[15px] p-3 border rounded-[20px] inline-block border-yellow mb-3"><i class="fa-solid fa-pen-to-square"></i> Experience</p>
-                    <img class="w-full rounded-[20px]" src="{{ asset('image/blog/lomba-malang.jpg') }}"
+                    <img class="w-full rounded-[20px]" src="{{ asset('images-blog/'.$blogs[0]->image) }}"
                         alt="">
                     <p class="text-white text-[25px] mt-5">{{ $blogs[0]->title }}</p>
                     <p class="text-slate-300 mt-2 text-[15px]">{!! $blogs[0]->description !!}</p>
@@ -508,7 +508,7 @@
                 <div data-aos="zoom-in-up" data-aos-once="true" data-aos-offset="-1300"
                     class="p-3 mb-3 bg-dark rounded-[20px]">
                     <p class="text-yellow text-[15px] p-3 border rounded-[20px] inline-block border-yellow mb-3"><i class="fa-solid fa-pen-to-square"></i> Experience</p>
-                    <img class="w-full rounded-[20px]" src="{{ asset('image/blog/lomba-um.jpg') }}" alt="">
+                    <img class="w-full rounded-[20px]" src="{{ asset('images-blog/'.$blogs[1]->image) }}" alt="">
                     <p class="text-white text-[20px] mt-5">{{ $blogs[1]->title }}</p>
 
                     <div class="flex gap-5 mt-1 items-center">
@@ -524,7 +524,7 @@
                 <div data-aos="zoom-in-up" data-aos-once="true" data-aos-offset="-1300"
                     class="p-3 mb-3 bg-dark rounded-[20px]">
                     <p class="text-yellow text-[15px] p-3 border rounded-[20px] inline-block border-yellow mb-3"><i class="fa-solid fa-pen-to-square"></i> Tech</p>
-                    <img class="w-full rounded-[20px]" src="{{ asset('image/blog/inertia.png') }}" alt="">
+                    <img class="w-full rounded-[20px]" src="{{ asset('images-blog/'.$blogs[2]->image) }}" alt="">
                     <p class="text-white text-[20px] mt-5">{{ $blogs[2]->title }}</p>
 
                     <div class="flex gap-5 mt-1 items-center">
